@@ -1,0 +1,55 @@
+<!-- templates/test.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Country Autocomplete</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Country Selection</h1>
+
+    <!-- Form for selecting a country -->
+    <form autocomplete="off" action="/test/" method="get">
+        <div class="autocomplete" style="width:300px;">
+            <input id="countryInput" type="text" name="country" placeholder="Type a country name">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const countryInput = document.getElementById('countryInput');
+
+            countryInput.addEventListener('input', function() {
+                const query = this.value;
+
+                if (query.length >= 3) {  // Start showing suggestions after 3 characters
+                    fetch(`/test/?term=${query}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            let datalist = document.createElement('datalist');
+                            datalist.id = 'countryList';
+                            countryInput.setAttribute('list', 'countryList');
+                            
+                            data.forEach(function(suggestion) {
+                                let option = document.createElement('option');
+                                option.value = suggestion;
+                                datalist.appendChild(option);
+                            });
+
+                            // Remove any previous datalist and attach the new one
+                            let existingDatalist = document.getElementById('countryList');
+                            if (existingDatalist) {
+                                existingDatalist.remove();
+                            }
+                            document.body.appendChild(datalist);
+                        });
+                }
+            });
+        });
+    </script>
+</body>
+</html> -->

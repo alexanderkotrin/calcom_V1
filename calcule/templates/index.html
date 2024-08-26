@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!-- Normalize.css for consistent default styles across browsers -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Modernizr for feature detection -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/3.11.7/modernizr.min.js"></script>
+
+    <style>
+        .header {
+            text-align: center;
+            padding: 5px;
+            color: rgb(0, 40, 104);
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar-custom {
+            background-color: rgb(191, 10, 48);
+        }
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #000000;
+        }
+        .container {
+            padding: 20px;
+        }
+        .result-header {
+            text-align: center;
+        }
+        .result-table {
+            width: 50%;
+            margin: auto;
+        }
+        .warning-message {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><strong>Welcome to Generis Publishing Calculation Room</strong></h1>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: white;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{% url 'index' %}"><i class="fas fa-home"></i> </a>
+                <a class="nav-item nav-link" href="{% url 'cpi_book_price' %}">CPI Book Price Calculator</a>
+                <a class="nav-item nav-link" href="{% url 'shipping' %}">Shipping Calculator</a>
+                <a class="nav-item nav-link" href="{% url 'order' %}">Order Calculator</a>
+                <a class="nav-item nav-link" href="{% url 'weight' %}">Weight Calculator</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% if calculator == 'cpi_book_price' %}
+            <!-- CPI Book Price Calculator Form -->
+            <h2>CPI Book Price Calculator</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="total_pages">Total Pages:</label>
+                    <input type="number" class="form-control" name="total_pages" id="total_pages" required>
+                </div>
+                <div class="form-group">
+                    <label for="color_pages">Color Pages:</label>
+                    <input type="number" class="form-control" id="color_pages" name="color_pages" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover_type">Cover Type:</label>
+                    <select class="form-control" id="cover_type" name="cover_type" required>
+                        <option value="Soft Cover">Soft Cover</option>
+                        <option value="Hard Cover">Hard Cover</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="copies">Number of Copies:</label>
+                    <input type="number" class="form-control" id="copies" name="copies" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+            {% if show_result %}
+                <h3 class="result-header">Calculation Results:</h3>
+                <table class="table table-bordered result-table">
+                    <tbody>
+                        <tr>
+                            <th>Paper Weight:</th>
+                            <td>{{ result.paper_weight }}</td>
+                        </tr>
+                        <tr>
+                            <th>Price per B&W pages:</th>
+                            <td>€{{ result.bw_pages_cost }}</td>
+                        </tr>
+                        <tr>
+                            <th>Price per Color pages:</th>
+                            <td>€{{ result.color_pages_cost }}</td>
+                        </tr>
+                        <tr>
+                            <th>Price per copy:</th>
+                            <td>€{{ result.price_per_copy }}</td>
+                        </tr>
+                        <tr>
+                            <th>Total cost for {{ copies }} copies:</th>
+                            <td>€{{ result.total_cost }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% elif calculator == 'shipping' %}
+            <!-- Shipping Calculator Form -->
+            <h2>Shipping Calculator</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="page_count">Total Pages:</label>
+                    <input type="number" class="form-control" id="page_count" name="page_count" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover_type">Cover Type:</label>
+                    <select class="form-control" id="cover_type" name="cover_type" required>
+                        <option value="Soft">Soft</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="copies">Number of Copies:</label>
+                    <input type="number" class="form-control" id="copies" name="copies" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input class="form-control" list="country_list" id="country" name="country" placeholder="Type to search..." required>
+                    <datalist id="country_list">
+                        {% for country in country_list %}
+                            <option value="{{ country }}">{{ country }}</option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+            {% if show_result %}
+                <h3 class="result-header">Calculation Results:</h3>
+                <table class="table table-bordered result-table text-center">
+                    <tbody>
+                        <tr>
+                            <th>Country:</th>
+                            <td>{{ result.country }}</td>
+                        </tr>
+                        <tr>
+                            <th>Number of copies:</th>
+                            <td>{{ result.copies }}</td>
+                        </tr>
+                        <tr>
+                            <th>Total weight of the parcel:</th>
+                            <td>{{ result.total_weight|floatformat:3 }} kg</td>
+                        </tr>
+                        <tr>
+                            <th>Shipping cost:</th>
+                            <td>€{{ result.shipping_cost }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% elif calculator == 'order' %}
+            <!-- Order Calculator Form -->
+            <h2>Order Calculator</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="total_pages">Total Pages:</label>
+                    <input type="number" class="form-control" id="total_pages" name="total_pages" required>
+                </div>
+                <div class="form-group">
+                    <label for="color_pages">Color Pages:</label>
+                    <input type="number" class="form-control" id="color_pages" name="color_pages" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover_type">Cover Type:</label>
+                    <select class="form-control" id="cover_type" name="cover_type" required>
+                        <option value="Soft Cover">Soft Cover</option>
+                        <option value="Hard Cover">Hard Cover</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="copies">Number of Copies:</label>
+                    <input type="number" class="form-control" id="copies" name="copies" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input class="form-control" list="country_list" id="country" name="country" placeholder="Type to search..." required>
+                    <datalist id="country_list">
+                        {% for country in country_list %}
+                            <option value="{{ country }}">{{ country }}</option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+            {% if show_result %}
+                <h3>Order Calculation Results:</h3>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Price per Book:</th>
+                            <td>€{{ result.price_per_copy }}</td>
+                        </tr>
+                        <tr>
+                            <th>Price per B&W Pages:</th>
+                            <td>€{{ result.bw_pages_cost }}</td>
+                        </tr>
+                        <tr>
+                            <th>Price per Color Pages:</th>
+                            <td>€{{ result.color_pages_cost }}</td>
+                        </tr>
+                        <tr>
+                            <th>Total Price of Books:</th>
+                            <td>€{{ result.total_cost }}</td>
+                        </tr>
+                        <tr>
+                            <th>Total Weight of Parcel:</th>
+                            <td>{{ result.total_weight }} kg</td>
+                        </tr>
+                        <tr>
+                            <th>Total Shipping Cost:</th>
+                            <td>€{{ result.shipping_cost }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% elif calculator == 'weight' %}
+            <!-- Weight Calculator Form -->
+            <h2>Book Weight Calculator</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="total_pages">Total Pages:</label>
+                    <input type="number" class="form-control" id="total_pages" name="total_pages" required>
+                </div>
+                <div class="form-group">
+                    <label for="color_pages">Color Pages:</label>
+                    <input type="number" class="form-control" id="color_pages" name="color_pages" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover_type">Cover Type:</label>
+                    <select class="form-control" id="cover_type" name="cover_type" required>
+                        <option value="Soft Cover">Soft Cover</option>
+                        <option value="Hard Cover">Hard Cover</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="copies">Number of Copies:</label>
+                    <input type="number" class="form-control" id="copies" name="copies" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate Weight</button>
+            </form>
+            {% if show_result %}
+                <h3 class="mt-5">Calculation Results:</h3>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Weight of B&W pages:</th>
+                            <td>{{ result.bw_pages_weight }} kg</td>
+                        </tr>
+                        <tr>
+                            <th>Weight of Color Pages:</th>
+                            <td>{{ result.color_pages_weight }} kg</td>
+                        </tr>
+                        <tr>
+                            <th>Total Weight of the book:</th>
+                            <td>{{ result.total_weight }} kg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

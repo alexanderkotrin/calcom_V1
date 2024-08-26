@@ -1,0 +1,313 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red24\green24\blue24;\red70\green137\blue204;
+\red193\green193\blue193;\red140\green211\blue254;\red89\green138\blue67;\red194\green126\blue101;\red202\green202\blue202;
+\red205\green173\blue106;\red167\green197\blue152;\red212\green214\blue154;\red183\green111\blue179;}
+{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c12157\c12157\c12157;\cssrgb\c33725\c61176\c83922;
+\cssrgb\c80000\c80000\c80000;\cssrgb\c61176\c86275\c99608;\cssrgb\c41569\c60000\c33333;\cssrgb\c80784\c56863\c47059;\cssrgb\c83137\c83137\c83137;
+\cssrgb\c84314\c72941\c49020;\cssrgb\c70980\c80784\c65882;\cssrgb\c86275\c86275\c66667;\cssrgb\c77255\c52549\c75294;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!\cf4 \strokec4 DOCTYPE\cf5 \strokec5  \cf6 \strokec6 html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 head\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf2 \strokec2 <\cf4 \strokec4 title\cf2 \strokec2 >\cf5 \strokec5 Calculator\cf2 \strokec2 </\cf4 \strokec4 title\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf7 \strokec7 <!-- Bootstrap CSS -->\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 link\cf5 \strokec5  \cf6 \strokec6 rel\cf5 \strokec5 =\cf8 \strokec8 "stylesheet"\cf5 \strokec5  \cf6 \strokec6 href\cf5 \strokec5 =\cf8 \strokec8 "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 style\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb3 \strokec9         \cf7 \strokec7 /* Style for the header section */\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf10 \strokec10 .header\cf9 \strokec9  \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 text-align\cf9 \strokec9 : \cf8 \strokec8 center\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 padding\cf9 \strokec9 : \cf11 \strokec11 5px\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 color\cf9 \strokec9 : \cf12 \strokec12 rgb\cf9 \strokec9 (\cf11 \strokec11 102\cf9 \strokec9 , \cf11 \strokec11 0\cf9 \strokec9 , \cf11 \strokec11 255\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 background-image\cf9 \strokec9 : \cf12 \strokec12 url\cf9 \strokec9 (\cf8 \strokec8 ''\cf9 \strokec9 ); \cf7 \strokec7 /* Update with the actual path to your image */\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 background-size\cf9 \strokec9 : \cf8 \strokec8 cover\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 background-position\cf9 \strokec9 : \cf8 \strokec8 center\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 /* Custom style for navbar */\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf10 \strokec10 .navbar-custom\cf9 \strokec9  \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 background-color\cf9 \strokec9 : \cf12 \strokec12 rgb\cf9 \strokec9 (\cf11 \strokec11 246\cf9 \strokec9 , \cf11 \strokec11 113\cf9 \strokec9 , \cf11 \strokec11 4\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 position\cf9 \strokec9 : \cf8 \strokec8 sticky\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 top\cf9 \strokec9 : \cf11 \strokec11 0\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 z-index\cf9 \strokec9 : \cf11 \strokec11 1000\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf10 \strokec10 .navbar-custom\cf9 \strokec9  \cf10 \strokec10 .navbar-nav\cf9 \strokec9  \cf10 \strokec10 .nav-link\cf9 \strokec9  \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 color\cf9 \strokec9 : \cf8 \strokec8 white\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf10 \strokec10 .navbar-custom\cf9 \strokec9  \cf10 \strokec10 .navbar-nav\cf9 \strokec9  \cf10 \strokec10 .nav-link:hover\cf9 \strokec9  \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 color\cf9 \strokec9 : \cf8 \strokec8 #CCCCCC\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 /* Container for additional content */\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf10 \strokec10 .container\cf9 \strokec9  \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 padding\cf9 \strokec9 : \cf11 \strokec11 20px\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 /* Hidden sections initially */\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf10 \strokec10 .calculator-section\cf9 \strokec9  \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 display\cf9 \strokec9 : \cf8 \strokec8 none\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 /* Result section styling */\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf10 \strokec10 .result\cf9 \strokec9  \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 margin-top\cf9 \strokec9 : \cf11 \strokec11 20px\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 padding\cf9 \strokec9 : \cf11 \strokec11 10px\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 border\cf9 \strokec9 : \cf11 \strokec11 1px\cf9 \strokec9  \cf8 \strokec8 solid\cf9 \strokec9  \cf8 \strokec8 #ddd\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 border-radius\cf9 \strokec9 : \cf11 \strokec11 5px\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 background-color\cf9 \strokec9 : \cf8 \strokec8 #f9f9f9\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9     \cf2 \strokec2 </\cf4 \strokec4 style\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 </\cf4 \strokec4 head\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 body\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf7 \strokec7 <!-- Header Section with Background Image -->\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "header"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 h1\cf2 \strokec2 >\cf5 \strokec5 Welcome to the Calculator App\cf2 \strokec2 </\cf4 \strokec4 h1\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf7 \strokec7 <!-- Navigation Bar -->\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 nav\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "navbar navbar-expand-lg navbar-custom"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "navbar-toggler"\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "button"\cf5 \strokec5  \cf6 \strokec6 data-toggle\cf5 \strokec5 =\cf8 \strokec8 "collapse"\cf5 \strokec5  \cf6 \strokec6 data-target\cf5 \strokec5 =\cf8 \strokec8 "#navbarNavAltMarkup"\cf5 \strokec5  \cf6 \strokec6 aria-controls\cf5 \strokec5 =\cf8 \strokec8 "navbarNavAltMarkup"\cf5 \strokec5  \cf6 \strokec6 aria-expanded\cf5 \strokec5 =\cf8 \strokec8 "false"\cf5 \strokec5  \cf6 \strokec6 aria-label\cf5 \strokec5 =\cf8 \strokec8 "Toggle navigation"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 span\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "navbar-toggler-icon"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf8 \strokec8 "color: white;"\cf2 \strokec2 ></\cf4 \strokec4 span\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "collapse navbar-collapse"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "navbarNavAltMarkup"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "navbar-nav"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 a\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "nav-item nav-link active"\cf5 \strokec5  \cf6 \strokec6 href\cf5 \strokec5 =\cf8 \strokec8 "#"\cf5 \strokec5  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 showSection\cf8 \strokec8 ('home')"\cf2 \strokec2 >\cf5 \strokec5 Home \cf2 \strokec2 <\cf4 \strokec4 span\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "sr-only"\cf2 \strokec2 >\cf5 \strokec5 (current)\cf2 \strokec2 </\cf4 \strokec4 span\cf2 \strokec2 ></\cf4 \strokec4 a\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 a\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "nav-item nav-link"\cf5 \strokec5  \cf6 \strokec6 href\cf5 \strokec5 =\cf8 \strokec8 "#"\cf5 \strokec5  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 showSection\cf8 \strokec8 ('cpi-book-price')"\cf2 \strokec2 >\cf5 \strokec5 CPI Book Price Calculator\cf2 \strokec2 </\cf4 \strokec4 a\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 a\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "nav-item nav-link"\cf5 \strokec5  \cf6 \strokec6 href\cf5 \strokec5 =\cf8 \strokec8 "#"\cf5 \strokec5  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 showSection\cf8 \strokec8 ('shipping')"\cf2 \strokec2 >\cf5 \strokec5 Shipping Calculator\cf2 \strokec2 </\cf4 \strokec4 a\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 a\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "nav-item nav-link"\cf5 \strokec5  \cf6 \strokec6 href\cf5 \strokec5 =\cf8 \strokec8 "#"\cf5 \strokec5  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 showSection\cf8 \strokec8 ('order')"\cf2 \strokec2 >\cf5 \strokec5 Order Calculator\cf2 \strokec2 </\cf4 \strokec4 a\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 a\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "nav-item nav-link"\cf5 \strokec5  \cf6 \strokec6 href\cf5 \strokec5 =\cf8 \strokec8 "#"\cf5 \strokec5  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 showSection\cf8 \strokec8 ('weight')"\cf2 \strokec2 >\cf5 \strokec5 Weight Calculator\cf2 \strokec2 </\cf4 \strokec4 a\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 </\cf4 \strokec4 nav\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf7 \strokec7 <!-- Main Content -->\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "container"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf7 \strokec7 <!-- Home Section -->\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "home"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "calculator-section"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 Welcome!\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \strokec5 Select a calculator from the navigation bar to start.\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf7 \strokec7 <!-- CPI Book Price Calculator Section -->\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "cpi-book-price"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "calculator-section"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 CPI Book Price Calculator\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 form\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "cpiBookPriceForm"\cf5 \strokec5  \cf6 \strokec6 onsubmit\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 calculateCPI\cf8 \strokec8 (\cf6 \strokec6 event\cf8 \strokec8 )"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-group"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 label\cf5 \strokec5  \cf6 \strokec6 for\cf5 \strokec5 =\cf8 \strokec8 "totalPages"\cf2 \strokec2 >\cf5 \strokec5 Total Pages:\cf2 \strokec2 </\cf4 \strokec4 label\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 input\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "number"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-control"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "totalPages"\cf5 \strokec5  \cf6 \strokec6 required\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-group"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 label\cf5 \strokec5  \cf6 \strokec6 for\cf5 \strokec5 =\cf8 \strokec8 "colorPages"\cf2 \strokec2 >\cf5 \strokec5 Color Pages:\cf2 \strokec2 </\cf4 \strokec4 label\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 input\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "number"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-control"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "colorPages"\cf5 \strokec5  \cf6 \strokec6 required\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-group"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 label\cf5 \strokec5  \cf6 \strokec6 for\cf5 \strokec5 =\cf8 \strokec8 "coverType"\cf2 \strokec2 >\cf5 \strokec5 Cover Type:\cf2 \strokec2 </\cf4 \strokec4 label\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 select\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-control"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "coverType"\cf5 \strokec5  \cf6 \strokec6 required\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 option\cf2 \strokec2 >\cf5 \strokec5 Soft Cover\cf2 \strokec2 </\cf4 \strokec4 option\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 option\cf2 \strokec2 >\cf5 \strokec5 Hard Cover\cf2 \strokec2 </\cf4 \strokec4 option\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 select\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-group"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 label\cf5 \strokec5  \cf6 \strokec6 for\cf5 \strokec5 =\cf8 \strokec8 "copies"\cf2 \strokec2 >\cf5 \strokec5 Number of Copies:\cf2 \strokec2 </\cf4 \strokec4 label\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 input\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "number"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-control"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "copies"\cf5 \strokec5  \cf6 \strokec6 required\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "submit"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "btn btn-primary"\cf2 \strokec2 >\cf5 \strokec5 Calculate\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 form\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "cpiBookPriceResult"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "result"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf7 \strokec7 <!-- Shipping Calculator Section -->\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "shipping"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "calculator-section"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 Shipping Calculator\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 form\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "shippingForm"\cf5 \strokec5  \cf6 \strokec6 onsubmit\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 calculateShipping\cf8 \strokec8 (\cf6 \strokec6 event\cf8 \strokec8 )"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-group"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 label\cf5 \strokec5  \cf6 \strokec6 for\cf5 \strokec5 =\cf8 \strokec8 "pageCount"\cf2 \strokec2 >\cf5 \strokec5 Page Count:\cf2 \strokec2 </\cf4 \strokec4 label\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 input\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "number"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-control"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "pageCount"\cf5 \strokec5  \cf6 \strokec6 required\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-group"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 label\cf5 \strokec5  \cf6 \strokec6 for\cf5 \strokec5 =\cf8 \strokec8 "coverTypeShipping"\cf2 \strokec2 >\cf5 \strokec5 Cover Type:\cf2 \strokec2 </\cf4 \strokec4 label\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 select\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-control"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "coverTypeShipping"\cf5 \strokec5  \cf6 \strokec6 required\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 option\cf2 \strokec2 >\cf5 \strokec5 Soft\cf2 \strokec2 </\cf4 \strokec4 option\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 option\cf2 \strokec2 >\cf5 \strokec5 Hard\cf2 \strokec2 </\cf4 \strokec4 option\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 select\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-group"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 label\cf5 \strokec5  \cf6 \strokec6 for\cf5 \strokec5 =\cf8 \strokec8 "numCopies"\cf2 \strokec2 >\cf5 \strokec5 Number of Copies:\cf2 \strokec2 </\cf4 \strokec4 label\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 input\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "number"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-control"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "numCopies"\cf5 \strokec5  \cf6 \strokec6 required\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-group"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 label\cf5 \strokec5  \cf6 \strokec6 for\cf5 \strokec5 =\cf8 \strokec8 "country"\cf2 \strokec2 >\cf5 \strokec5 Country:\cf2 \strokec2 </\cf4 \strokec4 label\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 input\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "text"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "form-control"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "country"\cf5 \strokec5  \cf6 \strokec6 required\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "submit"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "btn btn-primary"\cf2 \strokec2 >\cf5 \strokec5 Calculate\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 form\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "shippingResult"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "result"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf7 \strokec7 <!-- Order Calculator Section -->\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "order"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "calculator-section"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 Order Calculator\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 form\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "orderForm"\cf5 \strokec5  \cf6 \strokec6 onsubmit\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 calculateOrder\cf8 \strokec8 (\cf6 \strokec6 event\cf8 \strokec8 )"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf7 \strokec7 <!-- Form fields for Order Calculator -->\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "submit"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "btn btn-primary"\cf2 \strokec2 >\cf5 \strokec5 Calculate\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 form\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "orderResult"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "result"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf7 \strokec7 <!-- Weight Calculator Section -->\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "weight"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "calculator-section"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 Weight Calculator\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 form\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "weightForm"\cf5 \strokec5  \cf6 \strokec6 onsubmit\cf5 \strokec5 =\cf8 \strokec8 "\cf12 \strokec12 calculateWeight\cf8 \strokec8 (\cf6 \strokec6 event\cf8 \strokec8 )"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf7 \strokec7 <!-- Form fields for Weight Calculator -->\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf8 \strokec8 "submit"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "btn btn-primary"\cf2 \strokec2 >\cf5 \strokec5 Calculate\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 form\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf8 \strokec8 "weightResult"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf8 \strokec8 "result"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf7 \strokec7 <!-- Bootstrap JS and dependencies -->\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 script\cf9 \strokec9  \cf6 \strokec6 src\cf9 \strokec9 =\cf8 \strokec8 "https://code.jquery.com/jquery-3.3.1.slim.min.js"\cf2 \strokec2 ></\cf4 \strokec4 script\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 script\cf9 \strokec9  \cf6 \strokec6 src\cf9 \strokec9 =\cf8 \strokec8 "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"\cf2 \strokec2 ></\cf4 \strokec4 script\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 script\cf9 \strokec9  \cf6 \strokec6 src\cf9 \strokec9 =\cf8 \strokec8 "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"\cf2 \strokec2 ></\cf4 \strokec4 script\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf7 \strokec7 <!-- JavaScript Logic -->\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 script\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb3 \strokec9         \cf7 \strokec7 // Function to show the selected section and hide others\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf4 \strokec4 function\cf9 \strokec9  \cf12 \strokec12 showSection\cf9 \strokec9 (\cf6 \strokec6 sectionId\cf9 \strokec9 ) \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Hide all sections\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 sections\cf9 \strokec9  = \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementsByClassName\cf9 \strokec9 (\cf8 \strokec8 'calculator-section'\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf13 \strokec13 for\cf9 \strokec9  (\cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 i\cf9 \strokec9  = \cf11 \strokec11 0\cf9 \strokec9 ; \cf6 \strokec6 i\cf9 \strokec9  < \cf6 \strokec6 sections\cf9 \strokec9 .\cf6 \strokec6 length\cf9 \strokec9 ; \cf6 \strokec6 i\cf9 \strokec9 ++) \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf6 \strokec6 sections\cf9 \strokec9 [\cf6 \strokec6 i\cf9 \strokec9 ].\cf6 \strokec6 style\cf9 \strokec9 .\cf6 \strokec6 display\cf9 \strokec9  = \cf8 \strokec8 'none'\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Show the selected section\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf6 \strokec6 sectionId\cf9 \strokec9 ).\cf6 \strokec6 style\cf9 \strokec9 .\cf6 \strokec6 display\cf9 \strokec9  = \cf8 \strokec8 'block'\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 // Show the home section by default\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf12 \strokec12 showSection\cf9 \strokec9 (\cf8 \strokec8 'home'\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 // Example calculation function for CPI Book Price\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf4 \strokec4 function\cf9 \strokec9  \cf12 \strokec12 calculateCPI\cf9 \strokec9 (\cf6 \strokec6 event\cf9 \strokec9 ) \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 event\cf9 \strokec9 .\cf12 \strokec12 preventDefault\cf9 \strokec9 (); \cf7 \strokec7 // Prevent form submission\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Get form values\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 totalPages\cf9 \strokec9  = \cf12 \strokec12 parseInt\cf9 \strokec9 (\cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'totalPages'\cf9 \strokec9 ).\cf6 \strokec6 value\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 colorPages\cf9 \strokec9  = \cf12 \strokec12 parseInt\cf9 \strokec9 (\cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'colorPages'\cf9 \strokec9 ).\cf6 \strokec6 value\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 coverType\cf9 \strokec9  = \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'coverType'\cf9 \strokec9 ).\cf6 \strokec6 value\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 copies\cf9 \strokec9  = \cf12 \strokec12 parseInt\cf9 \strokec9 (\cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'copies'\cf9 \strokec9 ).\cf6 \strokec6 value\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Example logic for calculating costs\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 paperWeight\cf9 \strokec9  = \cf6 \strokec6 totalPages\cf9 \strokec9  <= \cf11 \strokec11 58\cf9 \strokec9  ? \cf8 \strokec8 "110 gms"\cf9 \strokec9  : \cf8 \strokec8 "80 gms"\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 bwPages\cf9 \strokec9  = \cf6 \strokec6 totalPages\cf9 \strokec9  - \cf6 \strokec6 colorPages\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 bwPagesCost\cf9 \strokec9  = \cf6 \strokec6 bwPages\cf9 \strokec9  * \cf11 \strokec11 0.0062\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 colorPagesCost\cf9 \strokec9  = \cf6 \strokec6 colorPages\cf9 \strokec9  * \cf11 \strokec11 0.0198\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 pricePerCopy\cf9 \strokec9  = ((\cf6 \strokec6 bwPagesCost\cf9 \strokec9  + \cf6 \strokec6 colorPagesCost\cf9 \strokec9  + \cf11 \strokec11 1.2\cf9 \strokec9 ) * \cf6 \strokec6 copies\cf9 \strokec9 ) / \cf6 \strokec6 copies\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 totalCost\cf9 \strokec9  = \cf6 \strokec6 pricePerCopy\cf9 \strokec9  * \cf6 \strokec6 copies\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Display results\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 result\cf9 \strokec9  = \cf8 \strokec8 `\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8                 <h3>--- Calculation Results ---</h3>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>Paper Weight: \cf4 \strokec4 $\{\cf6 \strokec6 paperWeight\cf4 \strokec4 \}\cf8 \strokec8 </p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>Price per \cf4 \strokec4 $\{\cf6 \strokec6 bwPages\cf4 \strokec4 \}\cf8 \strokec8  B&W pages: \'80\cf4 \strokec4 $\{\cf6 \strokec6 bwPagesCost\cf9 \strokec9 .\cf12 \strokec12 toFixed\cf9 \strokec9 (\cf11 \strokec11 2\cf9 \strokec9 )\cf4 \strokec4 \}\cf8 \strokec8 </p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>Price per \cf4 \strokec4 $\{\cf6 \strokec6 colorPages\cf4 \strokec4 \}\cf8 \strokec8  Color pages: \'80\cf4 \strokec4 $\{\cf6 \strokec6 colorPagesCost\cf9 \strokec9 .\cf12 \strokec12 toFixed\cf9 \strokec9 (\cf11 \strokec11 2\cf9 \strokec9 )\cf4 \strokec4 \}\cf8 \strokec8 </p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>Price per copy: \'80\cf4 \strokec4 $\{\cf6 \strokec6 pricePerCopy\cf9 \strokec9 .\cf12 \strokec12 toFixed\cf9 \strokec9 (\cf11 \strokec11 2\cf9 \strokec9 )\cf4 \strokec4 \}\cf8 \strokec8 </p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>Total cost for \cf4 \strokec4 $\{\cf6 \strokec6 copies\cf4 \strokec4 \}\cf8 \strokec8  copies: \'80\cf4 \strokec4 $\{\cf6 \strokec6 totalCost\cf9 \strokec9 .\cf12 \strokec12 toFixed\cf9 \strokec9 (\cf11 \strokec11 2\cf9 \strokec9 )\cf4 \strokec4 \}\cf8 \strokec8 </p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             `\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb3 \strokec9             \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'cpiBookPriceResult'\cf9 \strokec9 ).\cf6 \strokec6 innerHTML\cf9 \strokec9  = \cf6 \strokec6 result\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 // Example calculation function for Shipping Calculator\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf4 \strokec4 function\cf9 \strokec9  \cf12 \strokec12 calculateShipping\cf9 \strokec9 (\cf6 \strokec6 event\cf9 \strokec9 ) \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 event\cf9 \strokec9 .\cf12 \strokec12 preventDefault\cf9 \strokec9 (); \cf7 \strokec7 // Prevent form submission\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Get form values\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 pageCount\cf9 \strokec9  = \cf12 \strokec12 parseInt\cf9 \strokec9 (\cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'pageCount'\cf9 \strokec9 ).\cf6 \strokec6 value\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 coverType\cf9 \strokec9  = \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'coverTypeShipping'\cf9 \strokec9 ).\cf6 \strokec6 value\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 numCopies\cf9 \strokec9  = \cf12 \strokec12 parseInt\cf9 \strokec9 (\cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'numCopies'\cf9 \strokec9 ).\cf6 \strokec6 value\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 country\cf9 \strokec9  = \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'country'\cf9 \strokec9 ).\cf6 \strokec6 value\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Example logic for calculating shipping (replace with real logic)\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 bookWeight\cf9 \strokec9  = \cf6 \strokec6 coverType\cf9 \strokec9  === \cf8 \strokec8 'Hard'\cf9 \strokec9  ? (\cf6 \strokec6 pageCount\cf9 \strokec9  * \cf11 \strokec11 0.01\cf9 \strokec9  + \cf11 \strokec11 0.5\cf9 \strokec9 ) : (\cf6 \strokec6 pageCount\cf9 \strokec9  * \cf11 \strokec11 0.01\cf9 \strokec9  + \cf11 \strokec11 0.3\cf9 \strokec9 ); \cf7 \strokec7 // Simplified weight calculation\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 totalWeight\cf9 \strokec9  = \cf6 \strokec6 bookWeight\cf9 \strokec9  * \cf6 \strokec6 numCopies\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 zone\cf9 \strokec9  = \cf12 \strokec12 determineShippingZone\cf9 \strokec9 (\cf6 \strokec6 country\cf9 \strokec9 ); \cf7 \strokec7 // Function to determine the zone (not implemented)\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 shippingCost\cf9 \strokec9  = \cf12 \strokec12 getShippingCost\cf9 \strokec9 (\cf6 \strokec6 totalWeight\cf9 \strokec9 , \cf6 \strokec6 zone\cf9 \strokec9 ); \cf7 \strokec7 // Function to calculate cost based on weight and zone\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Example shipping cost calculation\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 shippingCostText\cf9 \strokec9  = \cf6 \strokec6 zone\cf9 \strokec9  !== \cf4 \strokec4 null\cf9 \strokec9  ? \cf8 \strokec8 `Shipping Cost: \'80\cf4 \strokec4 $\{\cf6 \strokec6 shippingCost\cf9 \strokec9 .\cf12 \strokec12 toFixed\cf9 \strokec9 (\cf11 \strokec11 2\cf9 \strokec9 )\cf4 \strokec4 \}\cf8 \strokec8 `\cf9 \strokec9  : \cf8 \strokec8 "Shipping details unavailable for this destination."\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Display results\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 result\cf9 \strokec9  = \cf8 \strokec8 `\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8                 <h3>--- Shipping Calculation Results ---</h3>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>Country: \cf4 \strokec4 $\{\cf6 \strokec6 country\cf4 \strokec4 \}\cf8 \strokec8 </p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>Number of Copies: \cf4 \strokec4 $\{\cf6 \strokec6 numCopies\cf4 \strokec4 \}\cf8 \strokec8 </p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>Total Weight: \cf4 \strokec4 $\{\cf6 \strokec6 totalWeight\cf9 \strokec9 .\cf12 \strokec12 toFixed\cf9 \strokec9 (\cf11 \strokec11 2\cf9 \strokec9 )\cf4 \strokec4 \}\cf8 \strokec8  kg</p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 <p>\cf4 \strokec4 $\{\cf6 \strokec6 shippingCostText\cf4 \strokec4 \}\cf8 \strokec8 </p>\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             `\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb3 \strokec9             \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'shippingResult'\cf9 \strokec9 ).\cf6 \strokec6 innerHTML\cf9 \strokec9  = \cf6 \strokec6 result\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf4 \strokec4 function\cf9 \strokec9  \cf12 \strokec12 calculateOrder\cf9 \strokec9 (\cf6 \strokec6 event\cf9 \strokec9 ) \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 event\cf9 \strokec9 .\cf12 \strokec12 preventDefault\cf9 \strokec9 (); \cf7 \strokec7 // Prevent form submission\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Example result (replace with real logic)\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 result\cf9 \strokec9  = \cf8 \strokec8 `Order calculation result.`\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'orderResult'\cf9 \strokec9 ).\cf6 \strokec6 innerHTML\cf9 \strokec9  = \cf6 \strokec6 result\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf4 \strokec4 function\cf9 \strokec9  \cf12 \strokec12 calculateWeight\cf9 \strokec9 (\cf6 \strokec6 event\cf9 \strokec9 ) \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 event\cf9 \strokec9 .\cf12 \strokec12 preventDefault\cf9 \strokec9 (); \cf7 \strokec7 // Prevent form submission\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Example result (replace with real logic)\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 result\cf9 \strokec9  = \cf8 \strokec8 `Weight calculation result.`\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf6 \strokec6 document\cf9 \strokec9 .\cf12 \strokec12 getElementById\cf9 \strokec9 (\cf8 \strokec8 'weightResult'\cf9 \strokec9 ).\cf6 \strokec6 innerHTML\cf9 \strokec9  = \cf6 \strokec6 result\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 // Example placeholder function to determine the shipping zone\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf4 \strokec4 function\cf9 \strokec9  \cf12 \strokec12 determineShippingZone\cf9 \strokec9 (\cf6 \strokec6 country\cf9 \strokec9 ) \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Dummy function to determine the zone based on country\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Replace with actual logic\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 zones\cf9 \strokec9  = \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf8 \strokec8 "USA"\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 1\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf8 \strokec8 "UK"\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 2\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf8 \strokec8 "Germany"\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 2\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf8 \strokec8 "Australia"\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 3\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf8 \strokec8 "Other"\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 4\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \};\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf13 \strokec13 return\cf9 \strokec9  \cf6 \strokec6 zones\cf9 \strokec9 [\cf6 \strokec6 country\cf9 \strokec9 ] || \cf11 \strokec11 4\cf9 \strokec9 ; \cf7 \strokec7 // Default to zone 4 if country not found\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\
+\cf9 \cb3 \strokec9         \cf7 \strokec7 // Example placeholder function to get shipping cost based on weight and zone\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \cf4 \strokec4 function\cf9 \strokec9  \cf12 \strokec12 getShippingCost\cf9 \strokec9 (\cf6 \strokec6 weight\cf9 \strokec9 , \cf6 \strokec6 zone\cf9 \strokec9 ) \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Dummy function to calculate shipping cost\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf7 \strokec7 // Replace with actual logic\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf4 \strokec4 var\cf9 \strokec9  \cf6 \strokec6 zoneRates\cf9 \strokec9  = \{\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf11 \strokec11 1\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 10\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf11 \strokec11 2\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 15\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf11 \strokec11 3\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 20\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \cf11 \strokec11 4\cf6 \strokec6 :\cf9 \strokec9  \cf11 \strokec11 25\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \};\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \cf13 \strokec13 return\cf9 \strokec9  \cf6 \strokec6 zoneRates\cf9 \strokec9 [\cf6 \strokec6 zone\cf9 \strokec9 ] * \cf6 \strokec6 weight\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         \}\cf5 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9     \cf2 \strokec2 </\cf4 \strokec4 script\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 </\cf4 \strokec4 body\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cf2 \cb3 \strokec2 </\cf4 \strokec4 html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+}
