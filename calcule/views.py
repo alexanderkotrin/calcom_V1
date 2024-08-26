@@ -122,7 +122,15 @@ def shipping_calculator(request):
     return render(request, 'index.html', {'calculator': 'shipping', 'country_list': country_list})
 
 
+from django.shortcuts import render
+
+# Add this function to pass the country list from the calculations.py file
+def get_country_list():
+    return list(country_zone.keys())
+
 def order_calculator(request):
+    country_list = get_country_list()
+
     if request.method == 'POST':
         total_pages = int(request.POST['total_pages'])
         color_pages = int(request.POST['color_pages'])
@@ -147,6 +155,7 @@ def order_calculator(request):
                     'cover_type': cover_type,
                     'copies': copies,
                     'country': country,
+                    'country_list': country_list  # Pass the country list to the template
                 }
             )
 
@@ -163,10 +172,10 @@ def order_calculator(request):
                 'cover_type': cover_type,
                 'copies': copies,
                 'country': country,
+                'country_list': country_list  # Pass the country list to the template
             }
         )
-    return render(request, 'index.html', {'calculator': 'order'})
-
+    return render(request, 'index.html', {'calculator': 'order', 'country_list': country_list})
 
 def weight_calculator(request):
     if request.method == 'POST':
@@ -179,17 +188,29 @@ def weight_calculator(request):
             cover_type = 'Soft Cover'
 
         try:
+            # Calculate the total weight of the book (including cover)
             total_book_weight_kg = calculate_book_weight(total_pages, cover_type)
 
-            bw_pages_weight = calculate_book_weight(total_pages - color_pages, cover_type)
-            color_pages_weight = calculate_book_weight(color_pages, cover_type)
+            # Calculate the weight of the cover
+            cover_weight_kg = calculate_book_weight(0, cover_type)
 
+            # Calculate B&W pages weight only if color_pages is less than total_pages
+            if color_pages > 0:
+                bw_pages_weight = calculate_book_weight(total_pages - color_pages, cover_type) - cover_weight_kg
+                color_pages_weight = calculate_book_weight(color_pages, cover_type) - cover_weight_kg
+            else:
+                bw_pages_weight = calculate_book_weight(total_pages, cover_type) - cover_weight_kg
+                color_pages_weight = 0.0
+
+            # Multiply by the number of copies
             total_weight_all_books_kg = total_book_weight_kg * copies
 
+            # Prepare the context dictionary
             context = {
                 'calculator': 'weight',
                 'show_result': True,
                 'result': {
+                    'cover_weight': round(cover_weight_kg, 3),
                     'bw_pages_weight': round(bw_pages_weight, 3),
                     'color_pages_weight': round(color_pages_weight, 3),
                     'total_weight': round(total_weight_all_books_kg, 3),

@@ -39,6 +39,7 @@ def calculate_cpi_cost(total_pages, color_pages, copies, cover_type):
             "paper_weight": paper_weight,
             "bw_pages_cost": bw_pages_cost,
             "color_pages_cost": color_pages_cost,
+            "cover_cost": cover_total_cost,
             "price_per_copy": round(total_cost / copies, 2),
             "total_cost": round(total_cost, 2)
         }
@@ -214,8 +215,8 @@ def calculate_book_weight(page_count, cover_type):
     cover_area_m2 = (152.4 / 1000) * (228.6 / 1000)
 
     # Calculate weights
-    paper_weight_kg = (page_area_m2 * paper_weight_gsm * page_count) / 1000
-    cover_weight_kg = (cover_area_m2 * cover_weight_gsm) / 1000
+    paper_weight_kg = (page_area_m2 * paper_weight_gsm * page_count / 2) / 1000
+    cover_weight_kg = (cover_area_m2 * cover_weight_gsm * 2) / 1000
 
     total_book_weight_kg = paper_weight_kg + cover_weight_kg
     return total_book_weight_kg

@@ -101,28 +101,33 @@
                 <table class="table table-bordered result-table">
                     <tbody>
                         <tr>
-                            <th>Paper Weight:</th>
+                            <td>Paper Weight:</td>
                             <td>{{ result.paper_weight }}</td>
                         </tr>
                         <tr>
-                            <th>Price per B&W pages:</th>
+                            <td>Price per B&W pages:</td>
                             <td>€{{ result.bw_pages_cost }}</td>
                         </tr>
                         <tr>
-                            <th>Price per Color pages:</th>
+                            <td>Price per Color pages:</td>
                             <td>€{{ result.color_pages_cost }}</td>
                         </tr>
                         <tr>
-                            <th>Price per copy:</th>
+                            <td>Cover Cost:</td>
+                            <td>€{{ result.cover_cost }}</td>
+                        </tr>
+                        <tr>
+                            <td>Price per copy:</td>
                             <td>€{{ result.price_per_copy }}</td>
                         </tr>
                         <tr>
                             <th>Total cost for {{ copies }} copies:</th>
-                            <td>€{{ result.total_cost }}</td>
+                            <th>€{{ result.total_cost }}</th>
                         </tr>
                     </tbody>
                 </table>
             {% endif %}
+        
         {% elif calculator == 'shipping' %}
             <!-- Shipping Calculator Form -->
             <h2>Shipping Calculator</h2>
@@ -159,24 +164,25 @@
                 <table class="table table-bordered result-table text-center">
                     <tbody>
                         <tr>
-                            <th>Country:</th>
+                            <td>Country:</td>
                             <td>{{ result.country }}</td>
                         </tr>
                         <tr>
-                            <th>Number of copies:</th>
+                            <td>Number of copies:</td>
                             <td>{{ result.copies }}</td>
                         </tr>
                         <tr>
-                            <th>Total weight of the parcel:</th>
+                            <td>Total weight of the parcel:</td>
                             <td>{{ result.total_weight|floatformat:3 }} kg</td>
                         </tr>
                         <tr>
                             <th>Shipping cost:</th>
-                            <td>€{{ result.shipping_cost }}</td>
+                            <th>€{{ result.shipping_cost }}</th>
                         </tr>
                     </tbody>
                 </table>
             {% endif %}
+        
         {% elif calculator == 'order' %}
             <!-- Order Calculator Form -->
             <h2>Order Calculator</h2>
@@ -213,36 +219,41 @@
                 <button type="submit" class="btn btn-primary">Calculate</button>
             </form>
             {% if show_result %}
-                <h3>Order Calculation Results:</h3>
-                <table class="table table-bordered">
+                <h3 class="result-header">Order Calculation Results:</h3>
+                <table class="table table-bordered result-table text-center">
                     <tbody>
                         <tr>
-                            <th>Price per Book:</th>
+                            <th>Country:</th>
+                            <th>{{ country }}</th>
+                        </tr>
+                        <tr>
+                            <td>Price per Book:</td>
                             <td>€{{ result.price_per_copy }}</td>
                         </tr>
                         <tr>
-                            <th>Price per B&W Pages:</th>
+                            <td>Price per B&W Pages:</td>
                             <td>€{{ result.bw_pages_cost }}</td>
                         </tr>
                         <tr>
-                            <th>Price per Color Pages:</th>
+                            <td>Price per Color Pages:</td>
                             <td>€{{ result.color_pages_cost }}</td>
                         </tr>
                         <tr>
-                            <th>Total Price of Books:</th>
+                            <td>Total Price of Books:</td>
                             <td>€{{ result.total_cost }}</td>
                         </tr>
                         <tr>
-                            <th>Total Weight of Parcel:</th>
+                            <td>Total Weight of Parcel:</td>
                             <td>{{ result.total_weight }} kg</td>
                         </tr>
                         <tr>
                             <th>Total Shipping Cost:</th>
-                            <td>€{{ result.shipping_cost }}</td>
+                            <th>€{{ result.shipping_cost }}</th>
                         </tr>
                     </tbody>
                 </table>
             {% endif %}
+        
         {% elif calculator == 'weight' %}
             <!-- Weight Calculator Form -->
             <h2>Book Weight Calculator</h2>
@@ -270,20 +281,30 @@
                 <button type="submit" class="btn btn-primary">Calculate Weight</button>
             </form>
             {% if show_result %}
-                <h3 class="mt-5">Calculation Results:</h3>
-                <table class="table table-bordered">
+                <h3 class="result-header">Weight Calculation Results:</h3>
+                <table class="table table-bordered result-table text-center">
+                    <thead>
+                        <tr>
+                            <th>Result</th>
+                            <th>Weight (kg)</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
-                            <th>Weight of B&W pages:</th>
+                            <td>Weight of B&W pages:</td>
                             <td>{{ result.bw_pages_weight }} kg</td>
                         </tr>
                         <tr>
-                            <th>Weight of Color Pages:</th>
+                            <td>Weight of Color Pages:</td>
                             <td>{{ result.color_pages_weight }} kg</td>
                         </tr>
                         <tr>
+                            <td>Weight of the Cover:</td>
+                            <td>{{ result.cover_weight }} kg</td>
+                        </tr>
+                        <tr>
                             <th>Total Weight of the book:</th>
-                            <td>{{ result.total_weight }} kg</td>
+                            <th>{{ result.total_weight }} kg</th>
                         </tr>
                     </tbody>
                 </table>
